@@ -1,0 +1,9 @@
+.container {
+  max-width: 960px;
+}
+
+.btn {
+  padding: 10px 0;
+  margin: 10px 0 5px;
+  color: #fff;
+}
