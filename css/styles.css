@@ -4,6 +4,13 @@
 
 .btn {
   padding: 10px 0;
-  margin: 10px 0 5px;
+  margin: 10px 0;
   color: #fff;
+}
+
+#add-form button,
+#update-form button,
+#search-form button,
+#delete-form button {
+  padding: 10px 40px;
 }
