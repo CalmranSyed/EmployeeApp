@@ -1,16 +1,21 @@
 .container {
   max-width: 960px;
+  padding: 0 15px;
 }
 
 .btn {
   padding: 10px 0;
-  margin: 10px 0;
   color: #fff;
+  border: none;
 }
 
 #add-form button,
 #update-form button,
-#search-form button,
-#delete-form button {
+#get-form button,
+#remove-form button {
   padding: 10px 40px;
+}
+
+.dashboard.row {
+  margin: 0 -16px;
 }

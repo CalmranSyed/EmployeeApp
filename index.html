@@ -10,78 +10,30 @@
 
     </head>
     <body class="bg-dark text-white">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <a class="navbar-brand fs-3 fw-bolder" href="#">EmployeeApp</a>
-                </div>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fs-3 fw-bolder" href="#">EmployeeApp</a>
+            </div>
+        </nav>
         <div class="container">
-            <h3 class="text-uppercase  fw-medium">Dashboard</h3>
-            <div class="dashboard row justify-content-center align-items-center flex-column my-5">
-                <button id="add-emp" class="btn col btn-success text-uppercase">Add employee</button>
-                <button id="search-emp" class="btn col btn-primary text-uppercase">Search employee</button>
-                <button id="list-emp" class="btn col btn-info text-uppercase">Show all employees</button>
-                <button id="update-emp" class="btn col btn-warning text-uppercase">Update employee</button>
-                <button id="delete-emp" class="btn col btn-danger text-uppercase">Delete employee</button>
-            </div>
-
-            <form id="add-form" class="my-5 d-none">
-                <h3 class="text-uppercase fw-bolder">Add employee details</h3>
-                <div class="mb-3">
-                    <input type="number" class="form-control" placeholder="Enter employee ID" id="emp-id">
+            <div class="dashboard row justify-content-center align-items-center my-5">
+                <h3 class="text-uppercase fw-medium mb-3">Dashboard</h3>
+                <div class="mb-3 col-12">
+                    <a id="add-emp" class="w-100 btn btn-success text-uppercase" href="add-employee.html">Add employee</a>
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Enter employee's full name" id="emp-phone">
+                <div class="mb-3 col-12">
+                    <a id="update-emp" class="w-100 btn btn-warning text-uppercase" href="update-employee.html">Update employee</a>
                 </div>
-                <div class="mb-3">
-                    <input type="number" class="form-control" placeholder="Enter employee's mobile number" id="emp-phone">
+                <div class="mb-3 col-12">
+                    <a id="get-emp" class="w-100 btn btn-primary text-uppercase"  href="get-employee.html">Search employee</a>
                 </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Enter employee's email address" id="emp-email" aria-describedby="emailHelp">
+                <div class="mb-3 col-12">
+                    <a id="list-emp" class="w-100 btn btn-info text-uppercase" href="list-employee.html">Show all employees</a>
                 </div>
-                <button type="submit" class="btn btn-success btn-lg text-uppercase fs-6">Submit</button>
-            </form>
-
-            <form id="update-form" class="my-5 d-none">
-                <h3 class="text-uppercase fw-bolder">Update employee details</h3>
-                <div class="mb-3">
-                    <input type="number" class="form-control" placeholder="Enter employee ID" id="updated-id">
+                <div class="mb-3 col-12">
+                    <a id="remove-emp" class="w-100 btn btn-danger text-uppercase" href="remove-employee.html">Delete employee</a>
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Enter employee's full name" id="updated-phone">
-                </div>
-                <div class="mb-3">
-                    <input type="number" class="form-control" placeholder="Enter employee's mobile number" id="updated-phone">
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Enter employee's email address" id="updated-email" aria-describedby="emailHelp">
-                </div>
-                <button type="submit" class="btn btn-success btn-lg text-uppercase fs-6">Submit</button>
-            </form>
-            
-            <div id="emp-list" class="d-none">
-                <h3 class="text-uppercase my-5 fw-medium">List of employees</h3>
-            </div>
-            
-            <form id="search-form" class="d-none">
-                <h3 class="text-uppercase my-5 fw-medium">Search Employee by ID</h3>
-                <div class="mb-3 d-flex">
-                    <input type="search" class="form-control">
-                    <button type="submit" class="btn btn-success my-0 text-uppercase fs-6">Submit</button>
-                </div>
-            </form>
-            
-            <form id="delete-form" class="d-none">
-                <h3 class="text-uppercase my-5 fw-medium">Enter Id of the Employee to be deleted</h3>
-                <div class="mb-3 d-flex">
-                    <input type="search" class="form-control">
-                    <button type="submit" class="btn btn-success my-0 text-uppercase fs-6">Submit</button>
-                </div>
-            </form>
-
-            
+            </div>            
         </div>
         
         <script src="js/jquery.min.js"></script>
