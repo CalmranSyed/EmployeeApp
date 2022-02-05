@@ -17,19 +17,11 @@
     <div class="container">
         <form id="add-form" class="my-5">
             <h3 class="text-uppercase fw-medium mb-3">Add employee details</h3>
-            <div class="mb-3">
-                <input type="number" class="form-control" placeholder="Enter employee ID" id="emp-id">
-            </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Enter employee's full name" id="emp-name">
-            </div>
-            <div class="mb-3">
-                <input type="number" class="form-control" placeholder="Enter employee's mobile number" id="emp-phone">
-            </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Enter employee's email address" id="emp-email" aria-describedby="emailHelp">
-            </div>
-            <button type="submit" class="submitbtn btn btn-success btn-lg text-uppercase fs-6">Submit</button>
+            <input id="emp-id" type="number" class="form-control mb-3" placeholder="Enter employee ID">
+            <input id="emp-name" type="text" class="form-control mb-3" placeholder="Enter employee's full name">
+            <input id="emp-phone" type="number" class="form-control mb-3" placeholder="Enter employee's mobile number">
+            <input id="emp-email" type="email" class="form-control mb-3" placeholder="Enter employee's email address">
+            <button id="submitbtn" type="submit" class=" btn btn-success btn-lg text-uppercase fs-6">Submit</button>
             <p class="error"></p>
             <p class="success"></p>
         </form>

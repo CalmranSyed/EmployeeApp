@@ -19,3 +19,15 @@
 .dashboard.row {
   margin: 0 -16px;
 }
+
+p.error {
+  color: #c86b6b;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+p.success {
+  color: #73c86b;
+  font-size: 18px;
+  margin-top: 10px;
+}
