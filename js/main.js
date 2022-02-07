@@ -40,9 +40,9 @@ $(document).ready(function () {
                 $("#add-form .error").text("");
                 $("#add-form .success").text("Employee data for "+employee_name.val()+" created with ID "+employee_id.val());
                 empdata = {
-                    "Full name":employee_name.val() , 
-                    "Mobile no":employee_phone.val() ,
-                    "Email ID":employee_email.val()
+                    "Name":employee_name.val() , 
+                    "Mobile":employee_phone.val() ,
+                    "Email":employee_email.val()
                 };
                 localStorage.setItem(employee_id.val(),JSON.stringify(empdata,null,"\t"));   
             }
@@ -51,7 +51,7 @@ $(document).ready(function () {
         $("#get-form button").click(function (ev) {
             ev.preventDefault();
 
-            var search_result = localStorage.getItem(search_employee.val());
+            var search_result = JSON.parse(localStorage.getItem(search_employee.val()));
 
             if (search_employee.val() == "") {
                 $("#add-form .success").text("");
@@ -66,11 +66,14 @@ $(document).ready(function () {
                 else {
                     $("#add-form .error").text("");
                     $("#add-form .success").text("Data found");
-                    console.log(search_result);
-                    $(".data").text(search_result);
+                    console.log("Name : "+search_result.Name+ "\nMobile no. : "+search_result.Mobile+"\nEmail ID : "+search_result.Email);
+                    $(".data").append("<p><strong>Name</strong> : "+search_result.Name+"</p>","<p><strong>Mobile no.</strong> : "+search_result.Mobile+"</p>","<p><strong>Email ID :</strong> "+search_result.Email+"</p>");
+                    // $(".data").append("Phone : "+search_result.Mobile);
                 }
             }
         })
+
+        $("")
     }
 
     empapp();
