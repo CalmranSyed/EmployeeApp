@@ -16,11 +16,13 @@
     </nav>
     <div class="container">
         <form id="remove-form" class="my-5">
-            <h3 class="text-uppercase my-5 fw-medium mb-3">Enter Id of the Employee to be deleted</h3>
+            <h3 class="my-5 fw-medium mb-3">Enter Id of the Employee to be deleted</h3>
             <div class="mb-3 d-flex">
-                <input type="search" class="form-control">
+                <input id="search" type="number" class="form-control">
                 <button type="submit" class="btn btn-success my-0 text-uppercase fs-6">Submit</button>
             </div>
+            <p class="error"></p>
+            <p class="success"></p>
         </form>
     </div>
     <script src="js/jquery.min.js"></script>
