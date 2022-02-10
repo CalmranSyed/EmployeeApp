@@ -170,12 +170,7 @@ $(document).ready(function () {
 
         $("#list-emp").click(function (ev) {
             
-            keys = Object.keys(localStorage);
-            values = Object.values(localStorage);
-            for (i = 0 ; i < keys.length ; i++) {
-                console.log(JSON.parse(values[i]));
-                $("emp-list").append("<div>"+JSON.parse(values[i])+"</div>")
-            }
+            
 
         });
     }
