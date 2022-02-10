@@ -1,17 +1,17 @@
 $(document).ready(function () {
     function empapp() {
-
+        
         var add_form = $("#add-form");
         var employee_id = $("#emp-id");
+        // var id_length = employee_id.val().toString().length; 
         var employee_name = $("#emp-name");
         var employee_phone = $("#emp-phone");
         var employee_email = $("#emp-email");
        
         var empdata = "";
 
-        var search_employee = $("#search");
-        var search_result = JSON.parse(localStorage.getItem(search_employee.val()));
 
+        var num_validation = /^[1-9]\d*$/gm;
         var name_validation = /[a-zA-Z]/;
         var mail_validation = /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
         
@@ -22,6 +22,12 @@ $(document).ready(function () {
             // form validation
             if ($("#add-form input").val() == "") {
                 $(".error").text("Please fill all form fields before submitting");
+                $("#add-form .success").text("");
+            }
+        
+            else if (!num_validation.test(employee_id.val())) {
+                console.log(error);
+                $("#add-form .error").text("Please enter a valid ID (maximum 4 digits)");
                 $("#add-form .success").text("");
             }
         
@@ -72,12 +78,12 @@ $(document).ready(function () {
                 }
                 
                 else {
-                    $(".error").text("");
+                    $(".data").text("");
                     $(".data").append("<p><strong>Name</strong> : "+search_result.Name+"</p>","<p><strong>Mobile no.</strong> : "+search_result.Mobile+"</p>","<p><strong>Email ID :</strong> "+search_result.Email+"</p>");
                     $(".error").text("");
                 }
             }
-        })
+        });
 
 
         $("#update-search button").click(function (ev) {
@@ -135,7 +141,7 @@ $(document).ready(function () {
                     })
                 }
             }
-        })
+        });
 
         $("#remove-form button").click(function (ev) {
             ev.preventDefault();
@@ -150,9 +156,8 @@ $(document).ready(function () {
             else {
 
                 if (search_result == null) {
-                    $("#add-form .success").text("");
+                    $(".success").text("");
                     $(".error").text("Employee data for ID "+search_employee.val()+" doesn't exist");
-                    $(".data").text("");
                 }
                 
                 else {
@@ -161,7 +166,18 @@ $(document).ready(function () {
                     $(".success").text("Employee data for "+search_result.Name+" was deleted");
                 }
             }
-        })
+        });
+
+        $("#list-emp").click(function (ev) {
+            
+            keys = Object.keys(localStorage);
+            values = Object.values(localStorage);
+            for (i = 0 ; i < keys.length ; i++) {
+                console.log(JSON.parse(values[i]));
+                $("emp-list").append("<div>"+JSON.parse(values[i])+"</div>")
+            }
+
+        });
     }
 
     empapp();
