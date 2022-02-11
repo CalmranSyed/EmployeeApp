@@ -31,3 +31,11 @@ p.success {
   font-size: 18px;
   margin-top: 10px;
 }
+
+.emp-data {
+  border-bottom: 1px solid;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}

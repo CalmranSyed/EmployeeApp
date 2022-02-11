@@ -3,7 +3,7 @@ $(document).ready(function () {
         
         var add_form = $("#add-form");
         var employee_id = $("#emp-id");
-        // var id_length = employee_id.val().toString().length; 
+        var id_length = employee_id.val().toString().length; 
         var employee_name = $("#emp-name");
         var employee_phone = $("#emp-phone");
         var employee_email = $("#emp-email");
@@ -11,7 +11,7 @@ $(document).ready(function () {
         var empdata = "";
 
 
-        var num_validation = /^[1-9]\d*$/gm;
+        var id_validation = /^[1-9]\d*$/gm;
         var name_validation = /[a-zA-Z]/;
         var mail_validation = /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
         
@@ -25,9 +25,13 @@ $(document).ready(function () {
                 $("#add-form .success").text("");
             }
         
-            else if (!num_validation.test(employee_id.val())) {
-                console.log(error);
+            else if (!id_validation.test(employee_id.val()) || employee_id.val().toString().length > 4) {
                 $("#add-form .error").text("Please enter a valid ID (maximum 4 digits)");
+                $("#add-form .success").text("");
+            }
+        
+            else if (employee_phone.val().toString().length > 10) {
+                $("#add-form .error").text("Please enter a valid Mobile number (maximum 10 digits)");
                 $("#add-form .success").text("");
             }
         
