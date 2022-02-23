@@ -1,0 +1,17 @@
+{
+  "name": "EmployeeApp",
+  "homepage": "https://github.com/khanlogicstudio/EmployeeApp",
+  "authors": [
+    "Salman Khan <salman.amir.dev@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
